@@ -334,7 +334,7 @@ Sem fork, release estável, deploy ou conexão automática implícitos; conferir
 | Fase | Entrega ou gate | Situação/condição |
 | --- | --- | --- |
 | 0 — Due Diligence | Licença, mapa, código e reproduções | Executados no escopo deste relatório |
-| 1 — Proof of Concept | Contrato linear, CLI e exemplo fictício | Candidato autoral implementado e executado localmente; revisão humana pendente |
+| 1 — Proof of Concept | Contrato linear, CLI e exemplo fictício | Implementação integrada em `main`; execução local validada e homologação com operador pendente |
 | 2 — Hardening | Negativos, limites, erros e cálculos independentes | 24 testes e verificador racional executados; limites em VALIDATION.md |
 | 3 — Integration | Consumidor com contrato/versionamento definidos | Não realizada; somente se necessária |
 | 4 — Observability | Evidência local suficiente; operação se virar serviço | Sem telemetria instalada |
