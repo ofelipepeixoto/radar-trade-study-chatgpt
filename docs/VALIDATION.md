@@ -38,10 +38,16 @@ Aritmética independente: entrada 100, stop 90, alvo 120; `fee=5` e `slippage=5`
 
 ## Limites da verificação
 
-Python 3.11 está previsto na matriz CI; execução local realizada em 3.12. Windows/PowerShell não foi exercitado. Não se executou instalação de wheel, load test, teste de usuário em uma nova conversa ChatGPT, coleta de mercado, integração MCP, deploy ou transação. O motor foi executado por ferramenta de código nesta sessão; isso não comprova que todos os ambientes ChatGPT terão Python ou lerão todos os arquivos.
+Execução local realizada em Python 3.12.14. A [CI da implementação](https://github.com/ofelipepeixoto/radar-trade-study-chatgpt/actions/runs/39722831355), sobre `bae4838b5cecaac2ae5e7cbacecd21a8a9ec6512`, passou nos dois jobs: Python 3.11 e 3.12. Windows/PowerShell não foi exercitado. Não se executou instalação de wheel, load test, teste de usuário em uma nova conversa ChatGPT, coleta de mercado, integração MCP, deploy ou transação. O motor foi executado por ferramenta de código; isso não comprova que todos os ambientes ChatGPT terão Python ou lerão todos os arquivos.
 
-CI é configurada com permissões de leitura e Actions fixadas por SHA consultado no GitHub. O resultado hospedado deve ser consultado na PR; configuração não equivale a execução concluída. A branch `main` permanece no bootstrap até revisão e merge autorizados.
+CI é configurada com permissões de leitura e Actions fixadas por SHA consultado no GitHub. As [execuções posteriores](https://github.com/ofelipepeixoto/radar-trade-study-chatgpt/actions/workflows/checks.yml) devem ser verificadas por revisão; configuração não equivale a execução concluída.
+
+## Integração em main
+
+Em 22/10/2026, a auditoria foi integrada pela [PR #1](https://github.com/ofelipepeixoto/radar-trade-study-chatgpt/pull/1), merge `b0499df069e12a7066bfa11aaa61b555b8bd76ba`, e a implementação pela [PR #2](https://github.com/ofelipepeixoto/radar-trade-study-chatgpt/pull/2), merge `57010b780fd0a00d0edbbb1065ebd3d195cd40af`. A árvore de `main` passou a conter 30 arquivos versionados, incluindo instruções, guia, contrato, motor, exemplo, testes, CI e relatório.
+
+Os 29 arquivos de texto dessa revisão foram obtidos do GitHub e conferidos por seus hashes de blob. Nessa cópia da revisão combinada, os 24 testes passaram novamente; o verificador racional confirmou 981 cenários e três timezones, a checagem offline conferiu quatro arquivos de runtime e a CLI executou o exemplo fictício com os mesmos números e hash de entrada registrados acima. A [CI após o merge](https://github.com/ofelipepeixoto/radar-trade-study-chatgpt/actions/runs/39724532692) também concluiu com sucesso sobre essa revisão de `main`. A imagem de criação em `docs/audit/repository-created.png` é registro histórico do bootstrap, anterior à integração.
 
 ## Upstream
 
-Auditoria e suíte upstream são propostas em PR independente. Foram observados 315 testes upstream passando e três regressões adicionais reproduzidas, sem reutilizar código upstream no runtime próprio. Consulte os documentos da PR de auditoria para revisão, método e reprodução.
+A [auditoria](audit/2026-10-22-day-trader-skill.md) e o [método de validação upstream](audit/UPSTREAM-VALIDATION.md) estão em `main`. Foram observados 315 testes upstream passando e três regressões adicionais reproduzidas, sem reutilizar código upstream no runtime próprio. Essas reproduções não foram repetidas na integração documental; a validação nova descrita acima cobre a implementação própria combinada.

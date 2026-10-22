@@ -1,10 +1,10 @@
 # Auditoria técnica — day-trader-skill → Radar Trade Study ChatGPT
 
 Data de consulta: **22/10/2026**, referência de calendário São Paulo.
-Autor da implementação proposta: Carlos Felipe / `ofelipepeixoto`.
+Autor da implementação: Carlos Felipe / `ofelipepeixoto`.
 Fonte upstream: [Jakeschincariol/day-trader-skill](https://github.com/Jakeschincariol/day-trader-skill/tree/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd).
 Revisão examinada: `3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd`, versão declarada 2.0.0.
-Este relatório e o código autoral são propostas de revisão independentes; não estão presumidos como integrados em `main`.
+Este relatório e o código autoral foram revisados em propostas independentes e integrados em `main` pelas [PR #1](https://github.com/ofelipepeixoto/radar-trade-study-chatgpt/pull/1) e [PR #2](https://github.com/ofelipepeixoto/radar-trade-study-chatgpt/pull/2), em 22/10/2026. As observações técnicas abaixo permanecem vinculadas às revisões examinadas; a integração não equivale a homologação financeira ou teste de usuário em uma nova conversa ChatGPT.
 
 ## 1. Executive Summary
 
@@ -64,7 +64,7 @@ Essas validações são distintas da suíte upstream; não comprovam Windows, am
 [CODE VERIFIED] A [licença upstream](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/LICENSE) é MIT, copyright 2026 Jake Schincariol.
 Ela permite reutilização, modificação e distribuição, inclusive comercial, com preservação do aviso e da licença nas cópias ou porções substanciais.
 A licença do código não estabelece direitos universais sobre dados, PDFs, marcas, imagens ou serviços consultados.
-A implementação proposta usa código novo e registra a referência em [NOTICE.md](https://github.com/ofelipepeixoto/radar-trade-study-chatgpt/blob/bae4838b5cecaac2ae5e7cbacecd21a8a9ec6512/NOTICE.md); não importa scripts, fixtures ou instruções upstream.
+A implementação usa código novo e registra a referência em [NOTICE.md](https://github.com/ofelipepeixoto/radar-trade-study-chatgpt/blob/bae4838b5cecaac2ae5e7cbacecd21a8a9ec6512/NOTICE.md); não importa scripts, fixtures ou instruções upstream.
 A página `https://gabriel-conteudos.vercel.app/c/trader?src=dm` não ficou acessível para verificação; seu conteúdo, preços e método são NOT VERIFIED e não foram copiados.
 A MIT local cobre o material autoral, sem transferir autoria ou licença de terceiros.
 
@@ -323,10 +323,10 @@ Não há preço de SaaS ou economia estimada comprovados. Primeiro comparar util
 ## 26. Repository Strategy
 
 Nome: **radar-trade-study-chatgpt**. Descrição: estudos condicionais de risco para ChatGPT com cálculo determinístico offline.
-Visibilidade pretendida: pública e experimental; licença MIT para o código original, autoria Carlos Felipe e referência upstream registrada.
+Visibilidade: pública e experimental; licença MIT para o código original, autoria Carlos Felipe e referência upstream registrada.
 Topics sugeridos: `chatgpt`, `python`, `risk-analysis`, `educational`, `offline`, `decimal`, `human-in-the-loop`.
 Estrutura útil: `src/radar_trade_study`, `tests`, `examples`, `docs`, instruções, contrato, segurança e arquitetura.
-PR #1 contém auditoria; PR #2 contém código, testes e guias como mudança independente. `main` permanece bootstrap até revisão e merge autorizados.
+As PR #1 e #2 foram integradas: a primeira acrescentou auditoria e evidências; a segunda acrescentou motor, instruções, código, testes e guias. Esses arquivos estão disponíveis em `main`.
 Sem fork, release estável, deploy ou conexão automática implícitos; conferir URLs/estado reais das PRs no GitHub.
 
 ## 27. Implementation Roadmap
@@ -334,7 +334,7 @@ Sem fork, release estável, deploy ou conexão automática implícitos; conferir
 | Fase | Entrega ou gate | Situação/condição |
 | --- | --- | --- |
 | 0 — Due Diligence | Licença, mapa, código e reproduções | Executados no escopo deste relatório |
-| 1 — Proof of Concept | Contrato linear, CLI e exemplo fictício | Candidato autoral implementado e executado localmente; revisão humana pendente |
+| 1 — Proof of Concept | Contrato linear, CLI e exemplo fictício | Implementação integrada em `main`; execução local validada e homologação com operador pendente |
 | 2 — Hardening | Negativos, limites, erros e cálculos independentes | 24 testes e verificador racional executados; limites em VALIDATION.md |
 | 3 — Integration | Consumidor com contrato/versionamento definidos | Não realizada; somente se necessária |
 | 4 — Observability | Evidência local suficiente; operação se virar serviço | Sem telemetria instalada |
@@ -372,7 +372,7 @@ Sem fork, release estável, deploy ou conexão automática implícitos; conferir
 
 Eu manteria `day-trader-skill` como referência técnica MIT e construiria **Radar Trade Study ChatGPT** como pacote autoral consultivo offline.
 Ele preenche uma lacuna de sizing linear e validação de premissas sem duplicar replay, pesquisa multiagente, portal DeFi ou leitura de backtests.
-O candidato examinado contém motor/CLI, exemplo, contrato e instruções; teste executado, CI, revisão humana e integração em `main` são estados separados.
+O projeto contém motor/CLI, exemplo, contrato e instruções integrados em `main`; teste executado, CI e integração são evidências separadas, e a homologação por um operador em nova conversa ChatGPT permanece pendente.
 Os comandos e resultados próprios estão em [VALIDATION.md](https://github.com/ofelipepeixoto/radar-trade-study-chatgpt/blob/bae4838b5cecaac2ae5e7cbacecd21a8a9ec6512/docs/VALIDATION.md): 24 testes, compilação, superfície offline, exemplo e 981 comparações racionais; não herdam os 315 testes upstream.
 Para usar no ChatGPT, seguir [USAR-NO-CHATGPT.md](https://github.com/ofelipepeixoto/radar-trade-study-chatgpt/blob/bae4838b5cecaac2ae5e7cbacecd21a8a9ec6512/docs/USAR-NO-CHATGPT.md) e a [documentação oficial de Projetos](https://learn.chatgpt.com/docs/projects): disponibilizar fontes e instruções não equivale a instalar ferramentas ou sincronizar uma pasta automaticamente.
 Nenhuma mensalidade adicional de software, API paga, VPS, execução financeira ou integração com outros repositórios é necessária para esta primeira entrega.

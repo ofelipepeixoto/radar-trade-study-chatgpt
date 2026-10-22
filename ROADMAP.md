@@ -2,9 +2,9 @@
 
 | Fase | Critério de saída | Estado desta entrega |
 | --- | --- | --- |
-| 0 — Diligência | Código/licença do upstream e sobreposição mapeados | Relatório em PR independente |
-| 1 — Fatia funcional | Cenário fictício reproduzível, contrato e testes negativos | Implementação proposta em PR |
-| 2 — Hardening | Revisão independente, correções e CI observada | Conferir docs/VALIDATION.md e PR |
+| 0 — Diligência | Código/licença do upstream e sobreposição mapeados | Relatório integrado em `main` pela PR #1 |
+| 1 — Fatia funcional | Cenário fictício reproduzível, contrato e testes negativos | Motor, instruções e testes integrados em `main` pela PR #2 |
+| 2 — Hardening | Revisão independente, correções e CI observada | 24 testes e 981 cenários conferidos; evidências em [VALIDATION.md](docs/VALIDATION.md) |
 | 3 — Integração | Contrato estável e consumidor real | Futura; sem conexão ativa |
 | 4 — Observabilidade | Problema operacional demonstra necessidade | JSON por execução já disponível; sem monitor |
 | 5 — Evals | Casos versionados de uso com e sem runner | Teste de instruções humano ainda pendente |

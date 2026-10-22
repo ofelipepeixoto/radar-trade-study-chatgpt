@@ -4,6 +4,20 @@ Estudos condicionais de risco em português, com cálculos determinísticos offl
 
 **Experimental e consultivo.** `ok` significa que o cálculo de um cenário passou nas validações implementadas. Não indica oportunidade de mercado, adequação pessoal, aprovação ou ordem de negociação.
 
+## Comece aqui
+
+O motor, as instruções, os testes e a auditoria estão disponíveis na branch `main`.
+
+| Objetivo | Arquivo ou pasta |
+| --- | --- |
+| Configurar e usar no ChatGPT | [Guia passo a passo](docs/USAR-NO-CHATGPT.md) |
+| Copiar as instruções do Projeto | [INSTRUCOES.md](INSTRUCOES.md) |
+| Entender entradas, fórmulas e resultados | [Contrato do cenário](docs/CONTRACT.md) |
+| Estudar um exemplo fictício | [scenario-long.json](examples/scenario-long.json) |
+| Consultar o motor e a interface de execução | [Código Python](src/radar_trade_study/) |
+| Conferir testes e evidências | [Testes](tests/) e [validação](docs/VALIDATION.md) |
+| Ler a auditoria em 30 seções | [Relatório técnico](docs/audit/2026-10-22-day-trader-skill.md) |
+
 ## Primeiro resultado
 
 Com Python 3.11 ou superior, a partir da raiz:
@@ -43,8 +57,8 @@ Não há escolha de ativos, indicadores técnicos, backtest, previsão, probabil
 
 Python e biblioteca padrão: sem dependências de runtime, banco, VPS ou API paga. Veja [arquitetura](ARCHITECTURE.md), [segurança](SECURITY.md), [regras de contribuição](CONTRIBUTING.md), [roadmap](ROADMAP.md) e [validação](docs/VALIDATION.md).
 
-CI executa testes, compilação, verificação de superfície offline e reprodução do exemplo em Python 3.11/3.12. Workflows presentes não comprovam execução aprovada: consulte as execuções reais no GitHub.
+CI executa testes, compilação, verificação de superfície offline, comparação com aritmética racional e reprodução do exemplo em Python 3.11/3.12. Consulte as [execuções reais no GitHub](https://github.com/ofelipepeixoto/radar-trade-study-chatgpt/actions/workflows/checks.yml).
 
 ## Origem e direitos
 
-Código novo sob [MIT](LICENSE), copyright Carlos Felipe. [NOTICE.md](NOTICE.md) registra o estudo e os limites da referência externa. O conteúdo comercial vinculado no pedido não foi reutilizado. A auditoria pública em 30 seções está proposta em PR independente; não implica homologação financeira nem integração de outros projetos.
+Código novo sob [MIT](LICENSE), copyright Carlos Felipe. [NOTICE.md](NOTICE.md) registra o estudo e os limites da referência externa. O conteúdo comercial vinculado no pedido não foi reutilizado. A [auditoria pública em 30 seções](docs/audit/2026-10-22-day-trader-skill.md) e a implementação foram integradas pelas [PR #1](https://github.com/ofelipepeixoto/radar-trade-study-chatgpt/pull/1) e [PR #2](https://github.com/ofelipepeixoto/radar-trade-study-chatgpt/pull/2). Essa integração não implica homologação financeira ou integração de outros projetos; a validação com um operador em nova conversa ChatGPT permanece pendente.
