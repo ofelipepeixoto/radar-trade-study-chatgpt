@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "hypothetical": true,
+  "instrument": "FICTICIO-USD",
+  "venue": "SIMULACAO-LOCAL",
+  "currency": "USD",
+  "side": "long",
+  "source": "Fixture autoral com precos ficticios; nao representa cotacao",
+  "observed_at": "2026-10-22T10:00:00-03:00",
+  "evaluated_at": "2026-10-22T10:01:00-03:00",
+  "max_age_seconds": 120,
+  "equity": "10000",
+  "risk_budget": "100",
+  "max_notional": "1000",
+  "entry": "100",
+  "stop": "90",
+  "target": "120",
+  "lot_step": "1",
+  "multiplier": "1",
+  "fee_bps_per_side": "5",
+  "slippage_bps_per_side": "5"
+}
